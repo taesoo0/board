@@ -22,6 +22,7 @@
     <div>
       <Table id="inquiry-table"></Table>
     </div>
+    <button><a href="/inquiry/insertForm">글쓰기</a></button>
   </div>
 </div>
 
@@ -31,7 +32,6 @@
 <script>
 
   $(document).ready(function () {
-      console.log("gdg");
       getTable();
   })
 
