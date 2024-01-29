@@ -2,11 +2,13 @@ package com.example.gongHome.inquiry.service;
 
 import com.example.gongHome.inquiry.dto.InquiryDto;
 import com.example.gongHome.inquiry.mapper.InquiryMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Slf4j
 @Service
 public class InquiryService {
     @Autowired
@@ -17,4 +19,13 @@ public class InquiryService {
         return inquiryDtoList;
     }
 
+    public String insertInquiry(InquiryDto inquiryDto) {
+        try {
+            inquiryMapper.insertInquiry(inquiryDto);
+            return "Success";
+        }catch (Exception e){
+            log.info(e.getMessage());
+            return "fail";
+        }
+    }
 }

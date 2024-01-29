@@ -17,4 +17,15 @@
         <include refid="searchConditions"></include>
         ORDER BY id ASC
     </select>
+
+    <insert id="insertInquiry">
+        INSERT INTO inquiry(
+          title,
+          contents
+        )
+        VALUES(
+          #{title},
+          #{contents}
+        )
+    </insert>
 </mapper>
