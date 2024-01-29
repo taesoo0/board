@@ -14,4 +14,6 @@ public interface InquiryMapper {
     InquiryDto getInquiry(int id);
 
     void updateInquiry(InquiryDto inquiryDto);
+
+    void deleteInquiry(String id);
 }

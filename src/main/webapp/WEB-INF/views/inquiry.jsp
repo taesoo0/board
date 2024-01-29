@@ -20,6 +20,7 @@
   </div>
   <div class="body-section-wrapper">
     <div>
+      <div class="body-header">문의글</div>
       <Table id="inquiry-table"></Table>
     </div>
     <button><a href="/inquiry/insertForm">글쓰기</a></button>
@@ -55,7 +56,18 @@
     })
   }
 
-  function deleteInquiry() {
-
+  function deleteInquiry(id) {
+    $.ajax({
+      url: '/inquiry/delete/'+id,
+      method: "delete",
+      contentType: "application/json",
+      success : (res) => {
+        console.log(res);
+        window.location = "/inquiry"
+      },
+      error : (err) => {
+        console.log(err);
+      }
+    })
   }
 </script>

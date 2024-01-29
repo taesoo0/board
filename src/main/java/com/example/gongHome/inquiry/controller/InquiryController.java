@@ -59,4 +59,9 @@ public class InquiryController {
         ModelAndView mv = new ModelAndView("redirect:/inquiry");
         return mv;
     }
+
+    @DeleteMapping("/delete/{id}")
+    public void deleteInquiry(@PathVariable String id){
+        inquiryService.deleteInquiry(id);
+    }
 }

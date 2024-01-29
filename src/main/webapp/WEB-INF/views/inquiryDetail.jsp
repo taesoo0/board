@@ -22,6 +22,7 @@
     </div>
     <div class="body-section-wrapper">
         <div>
+            <div class="body-header">문의 수정</div>
             <form id="updateForm" method="POST" action="/inquiry/update">
                 <div>작성일자</div><div>${inquiry.createTime}</div>
                 <input type="text" name="title" value="${inquiry.title}" />

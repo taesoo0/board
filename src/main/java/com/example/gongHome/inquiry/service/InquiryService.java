@@ -35,4 +35,8 @@ public class InquiryService {
     public void updateInquiry(InquiryDto inquiryDto) {
         inquiryMapper.updateInquiry(inquiryDto);
     }
+
+    public void deleteInquiry(String id) {
+        inquiryMapper.deleteInquiry(id);
+    }
 }
