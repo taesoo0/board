@@ -19,7 +19,14 @@ public class InquiryController {
     @GetMapping("")
     public ModelAndView inquiry () {
         ModelAndView mv = new ModelAndView("inquiry");
+        return mv;
+    }
 
+    @GetMapping("/detail/{id}")
+    public ModelAndView inquiryDetail (@PathVariable int id) {
+        ModelAndView mv = new ModelAndView("inquiryDetail");
+        InquiryDto inquiryDto = inquiryService.getInquiry(id);
+        mv.addObject("inquiry", inquiryDto);
         return mv;
     }
 
@@ -43,5 +50,13 @@ public class InquiryController {
     public List<InquiryDto> getInquiryList () {
         List<InquiryDto> inquiryDtoList = inquiryService.getInquiryList();
         return inquiryDtoList;
+    }
+
+
+    @PostMapping("/update")
+    public ModelAndView updateInquiry(InquiryDto inquiryDto){
+        inquiryService.updateInquiry(inquiryDto);
+        ModelAndView mv = new ModelAndView("redirect:/inquiry");
+        return mv;
     }
 }

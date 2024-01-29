@@ -45,7 +45,7 @@
         console.log(res);
         let html = '<tr><td>No</td><td>제목</td><td>작성자</td><td>작성일자</td></tr>';
         res.forEach((item) => {
-          html += '<tr><td>'+item.id+'</td><td>'+item.contents+'</td><td>정태수</td><td>'+item.createTime+'</td></tr>'
+          html += '<tr><td><a href="/inquiry/detail/'+ item.id +'">' + item.id + '</a></td><td>' + item.contents + '</td><td>정태수</td><td>' + item.createTime + '</td></tr>';
         })
         $("#inquiry-table").append(html);
       },

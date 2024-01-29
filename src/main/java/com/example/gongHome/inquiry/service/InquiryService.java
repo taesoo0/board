@@ -23,9 +23,16 @@ public class InquiryService {
         try {
             inquiryMapper.insertInquiry(inquiryDto);
             return "Success";
-        }catch (Exception e){
+        } catch (Exception e) {
             log.info(e.getMessage());
             return "fail";
         }
+    }
+    public InquiryDto getInquiry(int id) {
+        InquiryDto inquiryDto = inquiryMapper.getInquiry(id);
+        return inquiryDto;
+    }
+    public void updateInquiry(InquiryDto inquiryDto) {
+        inquiryMapper.updateInquiry(inquiryDto);
     }
 }
