@@ -8,4 +8,5 @@ import java.util.List;
 @Mapper
 public interface InquiryMapper {
     List<InquiryDto> getInquiryList();
+    void insertInquiry(InquiryDto inquiryDto);
 }

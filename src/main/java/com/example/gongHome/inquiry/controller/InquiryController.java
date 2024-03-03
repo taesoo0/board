@@ -26,6 +26,20 @@ public class InquiryController {
         return mv;
     }
 
+    @GetMapping("/insertForm")
+    public ModelAndView insertForm(){
+       ModelAndView mv = new ModelAndView("insertInquiry");
+       return mv;
+    }
+
+    @PostMapping("/insertInquiry")
+    public ModelAndView insertInquiry(InquiryDto inquiryDto) {
+        String result = inquiryService.setInquiry(inquiryDto);
+        log.info("insertForm : "+result);
+        ModelAndView mv = new ModelAndView("rgiedirect:/inquiry");
+        return mv;
+    }
+
     @GetMapping("/getInquiryList")
     public List<InquiryDto> getInquiryList () {
         List<InquiryDto> inquiryDtoList = inquiryService.getInquiryList();

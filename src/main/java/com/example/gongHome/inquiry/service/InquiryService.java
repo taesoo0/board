@@ -17,4 +17,13 @@ public class InquiryService {
         return inquiryDtoList;
     }
 
+    public String setInquiry(InquiryDto inquiryDto) {
+        try {
+            inquiryMapper.insertInquiry(inquiryDto);
+        }catch (Exception e){
+            e.printStackTrace();
+            return "fail";
+        }
+        return "success";
+    }
 }

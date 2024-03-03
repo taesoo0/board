@@ -21,6 +21,7 @@
   <div class="body-section-wrapper">
     <div>
       <Table id="inquiry-table"></Table>
+      <a href="/inquiry/insertForm">글쓰기</a>
     </div>
   </div>
 </div>
