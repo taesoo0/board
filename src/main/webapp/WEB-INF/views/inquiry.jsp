@@ -22,7 +22,6 @@
     <div>
       <div class="body-header">문의글</div>
       <Table id="inquiry-table"></Table>
-      <a href="/inquiry/insertForm">글쓰기</a>
     </div>
     <button><a href="/inquiry/insertForm">글쓰기</a></button>
   </div>
