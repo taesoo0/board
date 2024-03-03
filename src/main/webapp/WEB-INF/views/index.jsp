@@ -10,12 +10,12 @@
 <head>
     <title>Gong-Home</title>
 </head>
-<link href="../../css/index.css" rel="stylesheet"  type="text/css">
+<link href="../../css/index.css" rel="stylesheet" type="text/css">
 <body>
 <div class="body">
     <div class="header-section-wrapper">
         <div class="header-section">
-            <div class="header-logo">로고</div>
+            <a class="header-logo" href="/">로고</a>
             <nav class="header-li-wrapper">
                 <li>소개</li>
                 <li>제품설명</li>
