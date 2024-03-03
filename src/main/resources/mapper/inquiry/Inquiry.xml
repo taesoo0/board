@@ -11,7 +11,7 @@
     <sql id="selectInquiryList">
         SELECT
             *
-        FROM inquiry
+        FROM inquiry t1
     </sql>
 
     <select id="getInquiryList" resultType="com.example.gongHome.inquiry.dto.InquiryDto">

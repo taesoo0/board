@@ -1,6 +1,8 @@
 
 *{
     list-style-type: none;
+    padding: 0px;
+    margin:0px;
 }
 
 a{
@@ -9,31 +11,114 @@ a{
 }
 
 .header-section-wrapper{
-    display: flex;
     height: 10%;
     width: 100%;
-    padding: 30px;
+    padding: 0px 30px;
+    border-bottom: 1px solid #BCC0C6;
 }
 
 .header-section{
     width: 100%;
     height: 100%;
     display: flex;
+    justify-content: space-between;
+}
+
+.header-section > div:last-child{
+    width: 300px;
 }
 
 .header-logo{
     width: 5%;
     background-color: #ffffff;
     cursor:pointer;
+    text-align: center;
+    line-height: 74px;
 }
 
 .header-li-wrapper{
+    min-width: 700px;
     display: flex;
     justify-content: space-between;
-    margin: 20px 30px 20px 30px;
-    width: 95%;
+}
+.header-li-wrapper li{
+    line-height:74px;
+    margin: 0px 20px;
 }
 
-.header-li-wrapper>{
-    margin: auto;
+
+.body-header {
+    margin-bottom: 50px;
+}
+.body-header > div{
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 20px 0px;
+    border-bottom: 3px solid #000000;
+}
+
+.body-section-wrapper table {
+    margin: 0 auto;
+    width: 75%;
+    border-top: 1px solid #000000;
+    padding: 10px;
+    border-collapse: collapse;
+}
+
+.body-section-wrapper table tr {
+    height: 30px;
+    text-align: center;
+}
+
+.body-section-wrapper table tr td {
+    padding: 10px 0px;
+}
+
+.body-section-wrapper table tbody tr td{
+    border-bottom: 1px solid #DBDEE3;
+    border-top: 1px solid #DBDEE3;
+}
+.body-section-wrapper table tbody tr:hover{
+    background : #f6f6f6;
+}
+.body-section-wrapper table tbody tr td:last-child{
+    cursor: pointer;
+}
+
+.body-footer {
+    position:relative;
+}
+.body-footer .input-wrapper{
+    width: fit-content;
+    margin: 20px auto;
+}
+.body-footer .input-wrapper input{
+    padding: 10px 15px;
+    width: 300px;
+    border: 1px solid #DBDEE3;
+    outline: 0px;
+}
+.body-footer .input-wrapper input::placeholder{
+    color : #DBDEE3;
+}
+.body-footer .input-wrapper > div:first-child{
+    position:relative;
+}
+.body-footer .input-wrapper img{
+    position:absolute;
+    width: 25px;
+    right: 10px;
+    top: 5px;
+}
+.body-footer a{
+    background: #000000;
+    border-radius:20px;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 12px;
+    position:absolute;
+    right:12.5%;
+    bottom: 0px;
 }

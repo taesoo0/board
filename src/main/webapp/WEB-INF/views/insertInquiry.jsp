@@ -11,19 +11,20 @@
 <head>
     <title>Gong-Home</title>
 </head>
-<link href="../../css/index.css" rel="stylesheet"  type="text/css">
+<link href="../../css/index.css" rel="stylesheet" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <body>
 <div class="body">
     <div class="header-section-wrapper">
         <div class="header-section">
-            <a class="header-logo" href="/">로고</a>
+            <a class="header-logo" href="/">LOGO</a>
             <nav class="header-li-wrapper">
                 <li>소개</li>
                 <li>제품설명</li>
                 <li>다운로드</li>
                 <li><a href="/inquiry">문의글</a></li>
             </nav>
+            <div></div>
         </div>
     </div>
     <div class="body-section-wrapper">

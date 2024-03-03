@@ -22,6 +22,7 @@
                 <li>다운로드</li>
                 <li><a href="/inquiry">문의글</a></li>
             </nav>
+            <div></div>
         </div>
     </div>
     <div class="body-section-wrapper">
