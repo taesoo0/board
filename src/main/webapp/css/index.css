@@ -44,6 +44,7 @@ a{
 .header-li-wrapper li{
     line-height:74px;
     margin: 0px 20px;
+    cursor:pointer;
 }
 
 
@@ -111,6 +112,7 @@ a{
     width: 25px;
     right: 10px;
     top: 5px;
+    cursor: pointer;
 }
 .body-footer a{
     background: #000000;
