@@ -49,4 +49,16 @@
     }
   }
 
+    function submitForm(){
+        const titleValid = $(`input[name=title]`).val();
+        const bodyValid = $(`input[name=contents]`).val();
+
+        if (titleValid == null) {
+            alert("제목을 입력해 주세요")
+        }else if (bodyValid == null) {
+            alert("내용을 입력해 주세요.")
+        }else {
+            $(`form[name=contentsForm]`).submit();
+        }
+    }
 </script>

@@ -20,9 +20,11 @@
   </div>
   <div class="body-section-wrapper">
     <div>
+      <div class="body-header">문의글</div>
       <Table id="inquiry-table"></Table>
       <a href="/inquiry/insertForm">글쓰기</a>
     </div>
+    <button><a href="/inquiry/insertForm">글쓰기</a></button>
   </div>
 </div>
 
@@ -32,7 +34,6 @@
 <script>
 
   $(document).ready(function () {
-      console.log("gdg");
       getTable();
   })
 
@@ -44,14 +45,29 @@
       contentType:"application/json",
       success: function (res) {
         console.log(res);
-        let html = '<tr><td>No</td><td>제목</td><td>작성자</td><td>작성일자</td></tr>';
+        let html = '<tr><td>No</td><td>제목</td><td>작성자</td><td>작성일자</td><td></td></tr>';
         res.forEach((item) => {
-          html += '<tr><td>'+item.id+'</td><td>'+item.contents+'</td><td>정태수</td><td>'+item.createTime+'</td></tr>'
+          html += '<tr><td><a href="/inquiry/detail/'+ item.id +'">' + item.id + '</a></td><td>' + item.contents + '</td><td>정태수</td><td>' + item.createTime + '</td><td onclick="deleteInquiry('+item.id+')">삭제</td></tr>';
         })
         $("#inquiry-table").append(html);
       },
       error: function (error) {
         console.log(error);
+      }
+    })
+  }
+
+  function deleteInquiry(id) {
+    $.ajax({
+      url: '/inquiry/delete/'+id,
+      method: "delete",
+      contentType: "application/json",
+      success : (res) => {
+        console.log(res);
+        window.location = "/inquiry"
+      },
+      error : (err) => {
+        console.log(err);
       }
     })
   }

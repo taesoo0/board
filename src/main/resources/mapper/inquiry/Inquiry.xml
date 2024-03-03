@@ -4,6 +4,9 @@
 
 <mapper namespace="com.example.gongHome.inquiry.mapper.InquiryMapper">
     <sql id="searchConditions">
+        <if test='id != null'>
+            AND t1.id = #{id}
+        </if>
     </sql>
     <sql id="selectInquiryList">
         SELECT
@@ -17,14 +20,31 @@
         <include refid="searchConditions"></include>
         ORDER BY id ASC
     </select>
-
     <insert id="insertInquiry">
-        insert into inquiry(
+        INSERT INTO inquiry(
             title,
             contents
-        ) values (
-            #{title},
-            #{contents}
         )
+        VALUES(
+                  #{title},
+                  #{contents}
+              )
     </insert>
+    <select id="getInquiry" resultType="com.example.gongHome.inquiry.dto.InquiryDto" >
+        <include refid="selectInquiryList"></include>
+        WHERE 1=1
+        <include refid="searchConditions"></include>
+    </select>
+
+    <update id="updateInquiry">
+        UPDATE inquiry SET
+                           title = #{title},
+                           contents = #{contents}
+        WHERE id = #{id}
+    </update>
+
+    <delete id="deleteInquiry">
+        DELETE FROM inquiry
+        WHERE id = #{id}
+    </delete>
 </mapper>
